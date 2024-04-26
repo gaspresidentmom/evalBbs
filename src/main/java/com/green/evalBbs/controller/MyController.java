@@ -47,7 +47,7 @@ public class MyController {
 	@PostMapping("/write")
 	public String write(@RequestParam("title") String title, @RequestParam("content") String content,
 			@RequestParam("writer") String writer, @RequestParam("regdate") Date regdate) {
-		
+		System.out.println(title);
 		dao.write(title, content, writer, regdate);
 		return "redirect:list";
 	}
